@@ -1,0 +1,829 @@
+root@ip-172-31-41-247:~/YCSB# ./bin/ycsb load geode -P workloads/workloada -p geode.locator=172.31.41.247[10334]
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:geode-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /root/YCSB/geode/conf:/root/YCSB/geode/target/geode-binding-0.14.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.7/log4j-api-2.7.jar:/root/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.6/jackson-core-2.8.6.jar:/root/.m2/repository/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/geode/geode-core/1.2.0/geode-core-1.2.0.jar:/root/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar:/root/.m2/repository/org/apache/geode/geode-json/1.2.0/geode-json-1.2.0.jar:/root/.m2/repository/org/jgroups/jgroups/3.6.10.Final/jgroups-3.6.10.Final.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.7/log4j-core-2.7.jar:/root/YCSB/core/target/core-0.14.0-SNAPSHOT.jar:/root/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar:/root/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/net/java/dev/jna/jna/4.0.0/jna-4.0.0.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.6/jackson-annotations-2.8.6.jar:/root/.m2/repository/com/github/stephenc/findbugs/findbugs-annotations/1.3.9-1/findbugs-annotations-1.3.9-1.jar:/root/.m2/repository/org/apache/geode/geode-common/1.2.0/geode-common-1.2.0.jar:/root/.m2/repository/javax/resource/javax.resource-api/1.7/javax.resource-api-1.7.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/io/github/lukehutch/fast-classpath-scanner/2.0.11/fast-classpath-scanner-2.0.11.jar:/root/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/root/.m2/repository/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.jar:/root/.m2/repository/it/unimi/dsi/fastutil/7.1.0/fastutil-7.1.0.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.6/jackson-databind-2.8.6.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.GeodeClient -P workloads/workloada -p geode.locator=172.31.41.247[10334] -load
+Command line: -db com.yahoo.ycsb.db.GeodeClient -P workloads/workloada -p geode.locator=172.31.41.247[10334] -loadYCSB Client 0.14.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+[info 2018/04/24 00:06:17.411 UTC <Thread-2> tid=0x14] 
+---------------------------------------------------------------------------
+  
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with this
+  work for additional information regarding copyright ownership.
+   
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with the
+  License.  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+  License for the specific language governing permissions and limitations
+  under the License.
+  
+---------------------------------------------------------------------------
+Build-Date: 2017-07-12 07:18:53 -0700
+Build-Id: abaker 0
+Build-Java-Version: 1.8.0_121
+Build-Platform: Mac OS X 10.12.3 x86_64
+Product-Name: Apache Geode
+Product-Version: 1.2.0
+Source-Date: 2017-07-11 09:31:40 -0700
+Source-Repository: release/1.2.0
+Source-Revision: 964f2749065ce9c6898fd27983b43f1bd9fc77d0
+Native version: native code unavailable
+Running on: /172.31.41.247, 16 cpu(s), amd64 Linux 4.4.0-1052-aws 
+Communications version: 65
+Process ID: 28293
+User: root
+Current dir: /root/YCSB
+Home dir: /root
+Class Path:
+  /root/YCSB/geode/conf
+  /root/YCSB/geode/target/geode-binding-0.14.0-SNAPSHOT.jar
+  /root/.m2/repository/org/apache/logging/log4j/log4j-api/2.7/log4j-api-2.7.jar
+  /root/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar
+  /root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.6/jackson-core-2.8.6.jar
+  /root/.m2/repository/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar
+  /root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar
+  /root/.m2/repository/org/apache/geode/geode-core/1.2.0/geode-core-1.2.0.jar
+  /root/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar
+  /root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar
+  /root/.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar
+  /root/.m2/repository/org/apache/geode/geode-json/1.2.0/geode-json-1.2.0.jar
+  /root/.m2/repository/org/jgroups/jgroups/3.6.10.Final/jgroups-3.6.10.Final.jar
+  /root/.m2/repository/org/apache/logging/log4j/log4j-core/2.7/log4j-core-2.7.jar
+  /root/YCSB/core/target/core-0.14.0-SNAPSHOT.jar
+  /root/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+  /root/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar
+  /root/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar
+  /root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar
+  /root/.m2/repository/net/java/dev/jna/jna/4.0.0/jna-4.0.0.jar
+  /root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar
+  /root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.6/jackson-annotations-2.8.6.jar
+  /root/.m2/repository/com/github/stephenc/findbugs/findbugs-annotations/1.3.9-1/findbugs-annotations-1.3.9-1.jar
+  /root/.m2/repository/org/apache/geode/geode-common/1.2.0/geode-common-1.2.0.jar
+  /root/.m2/repository/javax/resource/javax.resource-api/1.7/javax.resource-api-1.7.jar
+  /root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar
+  /root/.m2/repository/io/github/lukehutch/fast-classpath-scanner/2.0.11/fast-classpath-scanner-2.0.11.jar
+  /root/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+  /root/.m2/repository/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.jar
+  /root/.m2/repository/it/unimi/dsi/fastutil/7.1.0/fastutil-7.1.0.jar
+  /root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.6/jackson-databind-2.8.6.jar
+Library Path:
+  /usr/java/packages/lib/amd64
+  /usr/lib/x86_64-linux-gnu/jni
+  /lib/x86_64-linux-gnu
+  /usr/lib/x86_64-linux-gnu
+  /usr/lib/jni
+  /lib
+  /usr/lib
+System Properties:
+    awt.toolkit = sun.awt.X11.XToolkit
+    file.encoding = UTF-8
+    file.encoding.pkg = sun.io
+    file.separator = /
+    java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+    java.awt.printerjob = sun.print.PSPrinterJob
+    java.class.version = 52.0
+    java.endorsed.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+    java.ext.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+    java.home = /usr/lib/jvm/java-8-openjdk-amd64/jre
+    java.io.tmpdir = /tmp
+    java.runtime.name = OpenJDK Runtime Environment
+    java.runtime.version = 1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12
+    java.specification.name = Java Platform API Specification
+    java.specification.vendor = Oracle Corporation
+    java.specification.version = 1.8
+    java.vendor = Oracle Corporation
+    java.vendor.url = http://java.oracle.com/
+    java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+    java.version = 1.8.0_162
+    java.vm.info = mixed mode
+    java.vm.name = OpenJDK 64-Bit Server VM
+    java.vm.specification.name = Java Virtual Machine Specification
+    java.vm.specification.vendor = Oracle Corporation
+    java.vm.specification.version = 1.8
+    java.vm.vendor = Oracle Corporation
+    java.vm.version = 25.162-b12
+    line.separator = 
+    os.version = 4.4.0-1052-aws
+    path.separator = :
+    sun.arch.data.model = 64
+    sun.boot.class.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+    sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+    sun.cpu.endian = little
+    sun.cpu.isalist = 
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.java.command = com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.GeodeClient -P workloads/workloada -p geode.locator=172.31.41.247[10334] -load
+    sun.java.launcher = SUN_STANDARD
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    sun.nio.ch.bugLevel = 
+    sun.os.patch.level = unknown
+    user.country = US
+    user.language = en
+    user.timezone = Etc/UTC
+Log4J 2 Configuration:
+    jar:file:/root/.m2/repository/org/apache/geode/geode-core/1.2.0/geode-core-1.2.0.jar!/log4j2.xml
+---------------------------------------------------------------------------
+
+
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[info 2018/04/24 00:06:17.474 UTC <Thread-2> tid=0x14] Running in client mode
+
+[info 2018/04/24 00:06:17.514 UTC <Thread-2> tid=0x14] Requesting cluster configuration
+
+[info 2018/04/24 00:06:17.519 UTC <Thread-2> tid=0x14] Loading previously deployed jars
+
+[info 2018/04/24 00:06:17.548 UTC <Thread-2> tid=0x14] AutoConnectionSource UpdateLocatorListTask started with interval=10,000 ms.
+
+[info 2018/04/24 00:06:17.550 UTC <Thread-2> tid=0x14] Pool DEFAULT started with multiuser-authentication=false
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+[info 2018/04/24 00:06:17.560 UTC <poolTimer-DEFAULT-3> tid=0x23] Updating membership port.  Port changed from 0 to 42,292.  ID is now ip-172-31-41-247(28293:loner):0:5aeef8f4
+
+[info 2018/04/24 00:06:17.650 UTC <Thread-2> tid=0x14] Caching PdxType[dsid=0, typenum=14950502
+        name=__GEMFIRE_JSON
+        fields=[
+        field1:byte[]:0:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=-1
+        field0:byte[]:1:1:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=1
+        field7:byte[]:2:2:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=2
+        field6:byte[]:3:3:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=3
+        field9:byte[]:4:4:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=4
+        field8:byte[]:5:5:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=5
+        field3:byte[]:6:6:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=6
+        field2:byte[]:7:7:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=7
+        field5:byte[]:8:8:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=8
+        field4:byte[]:9:9:idx0(relativeOffset)=0:idx1(vlfOffsetIndex)=9]]
+
+[OVERALL], RunTime(ms), 2754
+[OVERALL], Throughput(ops/sec), 363.10820624546113
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 8
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.29048656499636893
+[TOTAL_GCS_PS_MarkSweep], Count, 1
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 22
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.7988380537400145
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 30
+[TOTAL_GC_TIME_%], Time(%), 1.0893246187363834
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 3.0
+[CLEANUP], MinLatency(us), 3
+[CLEANUP], MaxLatency(us), 3
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 3
+[CLEANUP], 3, 1.0
+[INSERT], Operations, 1000
+[INSERT], AverageLatency(us), 1204.801
+[INSERT], MinLatency(us), 219
+[INSERT], MaxLatency(us), 141439
+[INSERT], 95thPercentileLatency(us), 4919
+[INSERT], 99thPercentileLatency(us), 6623
+[INSERT], Return=OK, 1000
+[INSERT], 219, 1.0
+[INSERT], 220, 2.0
+[INSERT], 221, 4.0
+[INSERT], 222, 5.0
+[INSERT], 223, 5.0
+[INSERT], 224, 5.0
+[INSERT], 225, 5.0
+[INSERT], 226, 3.0
+[INSERT], 227, 5.0
+[INSERT], 228, 11.0
+[INSERT], 229, 4.0
+[INSERT], 230, 9.0
+[INSERT], 231, 3.0
+[INSERT], 232, 1.0
+[INSERT], 233, 1.0
+[INSERT], 234, 5.0
+[INSERT], 235, 3.0
+[INSERT], 236, 4.0
+[INSERT], 237, 1.0
+[INSERT], 238, 4.0
+[INSERT], 239, 5.0
+[INSERT], 240, 2.0
+[INSERT], 241, 1.0
+[INSERT], 242, 5.0
+[INSERT], 244, 2.0
+[INSERT], 245, 2.0
+[INSERT], 246, 2.0
+[INSERT], 247, 2.0
+[INSERT], 248, 3.0
+[INSERT], 249, 1.0
+[INSERT], 250, 3.0
+[INSERT], 251, 2.0
+[INSERT], 252, 3.0
+[INSERT], 253, 2.0
+[INSERT], 254, 2.0
+[INSERT], 256, 1.0
+[INSERT], 257, 3.0
+[INSERT], 259, 2.0
+[INSERT], 262, 3.0
+[INSERT], 263, 1.0
+[INSERT], 264, 2.0
+[INSERT], 265, 3.0
+[INSERT], 266, 5.0
+[INSERT], 267, 1.0
+[INSERT], 268, 1.0
+[INSERT], 269, 3.0
+[INSERT], 270, 2.0
+[INSERT], 271, 3.0
+[INSERT], 272, 1.0
+[INSERT], 273, 1.0
+[INSERT], 274, 2.0
+[INSERT], 275, 1.0
+[INSERT], 276, 1.0
+[INSERT], 277, 2.0
+[INSERT], 278, 1.0
+[INSERT], 279, 1.0
+[INSERT], 280, 2.0
+[INSERT], 281, 1.0
+[INSERT], 283, 1.0
+[INSERT], 284, 1.0
+[INSERT], 286, 1.0
+[INSERT], 289, 3.0
+[INSERT], 290, 1.0
+[INSERT], 291, 1.0
+[INSERT], 292, 2.0
+[INSERT], 293, 2.0
+[INSERT], 294, 6.0
+[INSERT], 295, 1.0
+[INSERT], 296, 1.0
+[INSERT], 297, 5.0
+[INSERT], 298, 3.0
+[INSERT], 299, 1.0
+[INSERT], 300, 2.0
+[INSERT], 301, 3.0
+[INSERT], 302, 1.0
+[INSERT], 304, 1.0
+[INSERT], 305, 2.0
+[INSERT], 306, 2.0
+[INSERT], 307, 2.0
+[INSERT], 308, 1.0
+[INSERT], 309, 1.0
+[INSERT], 310, 1.0
+[INSERT], 311, 2.0
+[INSERT], 313, 1.0
+[INSERT], 314, 4.0
+[INSERT], 315, 2.0
+[INSERT], 316, 2.0
+[INSERT], 317, 1.0
+[INSERT], 319, 1.0
+[INSERT], 321, 2.0
+[INSERT], 322, 3.0
+[INSERT], 323, 1.0
+[INSERT], 324, 2.0
+[INSERT], 325, 2.0
+[INSERT], 326, 1.0
+[INSERT], 327, 2.0
+[INSERT], 328, 2.0
+[INSERT], 329, 1.0
+[INSERT], 330, 1.0
+[INSERT], 332, 1.0
+[INSERT], 333, 2.0
+[INSERT], 335, 1.0
+[INSERT], 338, 2.0
+[INSERT], 341, 1.0
+[INSERT], 343, 3.0
+[INSERT], 345, 3.0
+[INSERT], 346, 1.0
+[INSERT], 349, 1.0
+[INSERT], 351, 1.0
+[INSERT], 352, 2.0
+[INSERT], 353, 2.0
+[INSERT], 356, 3.0
+[INSERT], 357, 1.0
+[INSERT], 358, 1.0
+[INSERT], 360, 1.0
+[INSERT], 361, 3.0
+[INSERT], 362, 1.0
+[INSERT], 363, 1.0
+[INSERT], 364, 2.0
+[INSERT], 365, 3.0
+[INSERT], 366, 1.0
+[INSERT], 368, 2.0
+[INSERT], 370, 1.0
+[INSERT], 371, 1.0
+[INSERT], 372, 1.0
+[INSERT], 375, 2.0
+[INSERT], 376, 1.0
+[INSERT], 377, 2.0
+[INSERT], 378, 3.0
+[INSERT], 379, 1.0
+[INSERT], 382, 1.0
+[INSERT], 383, 5.0
+[INSERT], 384, 1.0
+[INSERT], 386, 2.0
+[INSERT], 388, 1.0
+[INSERT], 390, 1.0
+[INSERT], 391, 3.0
+[INSERT], 392, 1.0
+[INSERT], 393, 1.0
+[INSERT], 394, 1.0
+[INSERT], 395, 4.0
+[INSERT], 396, 1.0
+[INSERT], 397, 1.0
+[INSERT], 398, 2.0
+[INSERT], 400, 1.0
+[INSERT], 401, 1.0
+[INSERT], 402, 2.0
+[INSERT], 403, 1.0
+[INSERT], 405, 1.0
+[INSERT], 407, 3.0
+[INSERT], 409, 2.0
+[INSERT], 411, 2.0
+[INSERT], 412, 2.0
+[INSERT], 413, 1.0
+[INSERT], 415, 1.0
+[INSERT], 416, 3.0
+[INSERT], 418, 1.0
+[INSERT], 422, 2.0
+[INSERT], 423, 2.0
+[INSERT], 424, 2.0
+[INSERT], 425, 2.0
+[INSERT], 426, 2.0
+[INSERT], 427, 1.0
+[INSERT], 428, 2.0
+[INSERT], 429, 1.0
+[INSERT], 430, 2.0
+[INSERT], 432, 2.0
+[INSERT], 434, 1.0
+[INSERT], 435, 2.0
+[INSERT], 436, 3.0
+[INSERT], 437, 1.0
+[INSERT], 439, 2.0
+[INSERT], 440, 2.0
+[INSERT], 441, 2.0
+[INSERT], 442, 1.0
+[INSERT], 443, 3.0
+[INSERT], 445, 2.0
+[INSERT], 447, 1.0
+[INSERT], 448, 2.0
+[INSERT], 449, 1.0
+[INSERT], 450, 1.0
+[INSERT], 451, 2.0
+[INSERT], 452, 1.0
+[INSERT], 453, 1.0
+[INSERT], 457, 3.0
+[INSERT], 458, 2.0
+[INSERT], 460, 2.0
+[INSERT], 461, 3.0
+[INSERT], 462, 3.0
+[INSERT], 463, 2.0
+[INSERT], 464, 1.0
+[INSERT], 465, 2.0
+[INSERT], 468, 1.0
+[INSERT], 469, 1.0
+[INSERT], 470, 2.0
+[INSERT], 472, 1.0
+[INSERT], 473, 1.0
+[INSERT], 474, 1.0
+[INSERT], 475, 2.0
+[INSERT], 476, 3.0
+[INSERT], 477, 1.0
+[INSERT], 478, 2.0
+[INSERT], 481, 2.0
+[INSERT], 483, 2.0
+[INSERT], 484, 3.0
+[INSERT], 485, 1.0
+[INSERT], 487, 1.0
+[INSERT], 488, 3.0
+[INSERT], 489, 1.0
+[INSERT], 491, 1.0
+[INSERT], 492, 1.0
+[INSERT], 494, 1.0
+[INSERT], 498, 2.0
+[INSERT], 499, 2.0
+[INSERT], 500, 1.0
+[INSERT], 501, 1.0
+[INSERT], 503, 1.0
+[INSERT], 505, 1.0
+[INSERT], 506, 2.0
+[INSERT], 507, 2.0
+[INSERT], 508, 1.0
+[INSERT], 509, 1.0
+[INSERT], 510, 3.0
+[INSERT], 511, 1.0
+[INSERT], 512, 1.0
+[INSERT], 513, 1.0
+[INSERT], 515, 4.0
+[INSERT], 516, 1.0
+[INSERT], 518, 2.0
+[INSERT], 519, 2.0
+[INSERT], 520, 1.0
+[INSERT], 521, 1.0
+[INSERT], 522, 2.0
+[INSERT], 523, 2.0
+[INSERT], 524, 1.0
+[INSERT], 525, 2.0
+[INSERT], 527, 1.0
+[INSERT], 530, 3.0
+[INSERT], 533, 1.0
+[INSERT], 535, 1.0
+[INSERT], 536, 3.0
+[INSERT], 537, 5.0
+[INSERT], 538, 1.0
+[INSERT], 539, 2.0
+[INSERT], 540, 1.0
+[INSERT], 541, 2.0
+[INSERT], 542, 2.0
+[INSERT], 543, 2.0
+[INSERT], 545, 2.0
+[INSERT], 550, 3.0
+[INSERT], 551, 1.0
+[INSERT], 552, 1.0
+[INSERT], 553, 1.0
+[INSERT], 555, 2.0
+[INSERT], 557, 2.0
+[INSERT], 559, 4.0
+[INSERT], 562, 1.0
+[INSERT], 563, 2.0
+[INSERT], 564, 1.0
+[INSERT], 565, 2.0
+[INSERT], 567, 3.0
+[INSERT], 568, 2.0
+[INSERT], 569, 1.0
+[INSERT], 570, 2.0
+[INSERT], 571, 2.0
+[INSERT], 573, 1.0
+[INSERT], 574, 2.0
+[INSERT], 577, 1.0
+[INSERT], 579, 3.0
+[INSERT], 580, 3.0
+[INSERT], 581, 1.0
+[INSERT], 582, 1.0
+[INSERT], 583, 3.0
+[INSERT], 584, 4.0
+[INSERT], 585, 1.0
+[INSERT], 586, 3.0
+[INSERT], 589, 2.0
+[INSERT], 590, 1.0
+[INSERT], 592, 4.0
+[INSERT], 593, 1.0
+[INSERT], 594, 1.0
+[INSERT], 595, 4.0
+[INSERT], 596, 5.0
+[INSERT], 597, 1.0
+[INSERT], 598, 1.0
+[INSERT], 599, 1.0
+[INSERT], 600, 5.0
+[INSERT], 601, 3.0
+[INSERT], 602, 1.0
+[INSERT], 604, 2.0
+[INSERT], 605, 1.0
+[INSERT], 606, 4.0
+[INSERT], 607, 1.0
+[INSERT], 608, 1.0
+[INSERT], 609, 1.0
+[INSERT], 611, 2.0
+[INSERT], 612, 1.0
+[INSERT], 613, 3.0
+[INSERT], 614, 1.0
+[INSERT], 615, 3.0
+[INSERT], 616, 1.0
+[INSERT], 618, 1.0
+[INSERT], 619, 2.0
+[INSERT], 621, 1.0
+[INSERT], 623, 2.0
+[INSERT], 624, 2.0
+[INSERT], 625, 2.0
+[INSERT], 627, 2.0
+[INSERT], 628, 1.0
+[INSERT], 630, 1.0
+[INSERT], 631, 1.0
+[INSERT], 632, 1.0
+[INSERT], 633, 3.0
+[INSERT], 634, 3.0
+[INSERT], 635, 1.0
+[INSERT], 636, 4.0
+[INSERT], 638, 2.0
+[INSERT], 640, 1.0
+[INSERT], 642, 1.0
+[INSERT], 644, 1.0
+[INSERT], 647, 1.0
+[INSERT], 648, 1.0
+[INSERT], 650, 3.0
+[INSERT], 651, 1.0
+[INSERT], 655, 2.0
+[INSERT], 657, 1.0
+[INSERT], 658, 1.0
+[INSERT], 660, 1.0
+[INSERT], 662, 3.0
+[INSERT], 664, 1.0
+[INSERT], 665, 1.0
+[INSERT], 666, 1.0
+[INSERT], 667, 1.0
+[INSERT], 668, 1.0
+[INSERT], 669, 1.0
+[INSERT], 671, 1.0
+[INSERT], 673, 2.0
+[INSERT], 674, 2.0
+[INSERT], 676, 1.0
+[INSERT], 679, 1.0
+[INSERT], 681, 1.0
+[INSERT], 683, 1.0
+[INSERT], 684, 2.0
+[INSERT], 686, 1.0
+[INSERT], 687, 4.0
+[INSERT], 688, 4.0
+[INSERT], 689, 1.0
+[INSERT], 690, 1.0
+[INSERT], 693, 3.0
+[INSERT], 696, 1.0
+[INSERT], 699, 1.0
+[INSERT], 701, 1.0
+[INSERT], 703, 1.0
+[INSERT], 704, 1.0
+[INSERT], 705, 2.0
+[INSERT], 706, 2.0
+[INSERT], 707, 2.0
+[INSERT], 712, 1.0
+[INSERT], 713, 1.0
+[INSERT], 714, 2.0
+[INSERT], 719, 2.0
+[INSERT], 722, 2.0
+[INSERT], 723, 2.0
+[INSERT], 725, 1.0
+[INSERT], 727, 2.0
+[INSERT], 728, 1.0
+[INSERT], 729, 1.0
+[INSERT], 730, 1.0
+[INSERT], 731, 1.0
+[INSERT], 733, 3.0
+[INSERT], 734, 1.0
+[INSERT], 737, 1.0
+[INSERT], 740, 1.0
+[INSERT], 743, 1.0
+[INSERT], 744, 1.0
+[INSERT], 745, 1.0
+[INSERT], 746, 2.0
+[INSERT], 747, 2.0
+[INSERT], 748, 2.0
+[INSERT], 752, 2.0
+[INSERT], 754, 1.0
+[INSERT], 756, 1.0
+[INSERT], 762, 1.0
+[INSERT], 763, 1.0
+[INSERT], 764, 1.0
+[INSERT], 767, 1.0
+[INSERT], 768, 1.0
+[INSERT], 770, 1.0
+[INSERT], 774, 1.0
+[INSERT], 775, 1.0
+[INSERT], 778, 1.0
+[INSERT], 781, 1.0
+[INSERT], 782, 1.0
+[INSERT], 783, 1.0
+[INSERT], 785, 1.0
+[INSERT], 786, 1.0
+[INSERT], 789, 2.0
+[INSERT], 790, 1.0
+[INSERT], 792, 1.0
+[INSERT], 793, 1.0
+[INSERT], 796, 2.0
+[INSERT], 797, 1.0
+[INSERT], 798, 2.0
+[INSERT], 802, 1.0
+[INSERT], 804, 2.0
+[INSERT], 805, 1.0
+[INSERT], 808, 1.0
+[INSERT], 809, 1.0
+[INSERT], 810, 1.0
+[INSERT], 811, 1.0
+[INSERT], 816, 1.0
+[INSERT], 817, 1.0
+[INSERT], 823, 1.0
+[INSERT], 827, 1.0
+[INSERT], 830, 1.0
+[INSERT], 835, 1.0
+[INSERT], 838, 1.0
+[INSERT], 839, 1.0
+[INSERT], 840, 2.0
+[INSERT], 842, 2.0
+[INSERT], 843, 3.0
+[INSERT], 848, 1.0
+[INSERT], 851, 1.0
+[INSERT], 861, 1.0
+[INSERT], 877, 1.0
+[INSERT], 879, 1.0
+[INSERT], 883, 1.0
+[INSERT], 887, 1.0
+[INSERT], 889, 1.0
+[INSERT], 890, 1.0
+[INSERT], 892, 2.0
+[INSERT], 893, 1.0
+[INSERT], 897, 2.0
+[INSERT], 907, 1.0
+[INSERT], 910, 1.0
+[INSERT], 911, 1.0
+[INSERT], 913, 1.0
+[INSERT], 914, 1.0
+[INSERT], 915, 1.0
+[INSERT], 919, 1.0
+[INSERT], 924, 1.0
+[INSERT], 925, 1.0
+[INSERT], 926, 1.0
+[INSERT], 939, 1.0
+[INSERT], 941, 1.0
+[INSERT], 946, 1.0
+[INSERT], 953, 2.0
+[INSERT], 957, 1.0
+[INSERT], 959, 1.0
+[INSERT], 964, 2.0
+[INSERT], 966, 2.0
+[INSERT], 979, 1.0
+[INSERT], 983, 1.0
+[INSERT], 986, 1.0
+[INSERT], 992, 1.0
+[INSERT], 995, 1.0
+[INSERT], 996, 1.0
+[INSERT], 1000, 1.0
+[INSERT], 1003, 3.0
+[INSERT], 1004, 1.0
+[INSERT], 1009, 1.0
+[INSERT], 1011, 1.0
+[INSERT], 1012, 1.0
+[INSERT], 1016, 1.0
+[INSERT], 1031, 1.0
+[INSERT], 1034, 1.0
+[INSERT], 1035, 1.0
+[INSERT], 1036, 1.0
+[INSERT], 1043, 1.0
+[INSERT], 1048, 2.0
+[INSERT], 1051, 1.0
+[INSERT], 1053, 1.0
+[INSERT], 1059, 3.0
+[INSERT], 1072, 1.0
+[INSERT], 1086, 1.0
+[INSERT], 1087, 1.0
+[INSERT], 1090, 1.0
+[INSERT], 1094, 1.0
+[INSERT], 1095, 1.0
+[INSERT], 1103, 1.0
+[INSERT], 1116, 1.0
+[INSERT], 1125, 1.0
+[INSERT], 1128, 2.0
+[INSERT], 1129, 1.0
+[INSERT], 1135, 1.0
+[INSERT], 1161, 1.0
+[INSERT], 1167, 1.0
+[INSERT], 1176, 1.0
+[INSERT], 1179, 1.0
+[INSERT], 1187, 1.0
+[INSERT], 1193, 1.0
+[INSERT], 1194, 1.0
+[INSERT], 1199, 1.0
+[INSERT], 1205, 1.0
+[INSERT], 1206, 1.0
+[INSERT], 1258, 1.0
+[INSERT], 1263, 1.0
+[INSERT], 1267, 1.0
+[INSERT], 1294, 1.0
+[INSERT], 1320, 1.0
+[INSERT], 1322, 1.0
+[INSERT], 1342, 1.0
+[INSERT], 1359, 1.0
+[INSERT], 1366, 1.0
+[INSERT], 1370, 1.0
+[INSERT], 1379, 1.0
+[INSERT], 1380, 1.0
+[INSERT], 1390, 1.0
+[INSERT], 1433, 1.0
+[INSERT], 1439, 1.0
+[INSERT], 1464, 1.0
+[INSERT], 1469, 1.0
+[INSERT], 1477, 1.0
+[INSERT], 1482, 1.0
+[INSERT], 1505, 1.0
+[INSERT], 1517, 1.0
+[INSERT], 1520, 1.0
+[INSERT], 1538, 1.0
+[INSERT], 1552, 1.0
+[INSERT], 1588, 1.0
+[INSERT], 1604, 1.0
+[INSERT], 1686, 1.0
+[INSERT], 1693, 1.0
+[INSERT], 1711, 1.0
+[INSERT], 1880, 1.0
+[INSERT], 1923, 1.0
+[INSERT], 2615, 1.0
+[INSERT], 2641, 1.0
+[INSERT], 2655, 1.0
+[INSERT], 2689, 1.0
+[INSERT], 2839, 1.0
+[INSERT], 3013, 1.0
+[INSERT], 3035, 1.0
+[INSERT], 3051, 1.0
+[INSERT], 3073, 1.0
+[INSERT], 3231, 1.0
+[INSERT], 3267, 1.0
+[INSERT], 3307, 1.0
+[INSERT], 3359, 1.0
+[INSERT], 3393, 1.0
+[INSERT], 3397, 1.0
+[INSERT], 3431, 1.0
+[INSERT], 3461, 1.0
+[INSERT], 3513, 1.0
+[INSERT], 3519, 1.0
+[INSERT], 3557, 1.0
+[INSERT], 3579, 1.0
+[INSERT], 3583, 1.0
+[INSERT], 3599, 1.0
+[INSERT], 3609, 1.0
+[INSERT], 3617, 1.0
+[INSERT], 3669, 1.0
+[INSERT], 3671, 1.0
+[INSERT], 3685, 1.0
+[INSERT], 3691, 1.0
+[INSERT], 3703, 1.0
+[INSERT], 3787, 1.0
+[INSERT], 3799, 1.0
+[INSERT], 3811, 1.0
+[INSERT], 3877, 1.0
+[INSERT], 3959, 1.0
+[INSERT], 3965, 1.0
+[INSERT], 4005, 1.0
+[INSERT], 4011, 1.0
+[INSERT], 4051, 1.0
+[INSERT], 4119, 1.0
+[INSERT], 4155, 1.0
+[INSERT], 4159, 1.0
+[INSERT], 4167, 1.0
+[INSERT], 4175, 1.0
+[INSERT], 4179, 1.0
+[INSERT], 4287, 1.0
+[INSERT], 4359, 1.0
+[INSERT], 4379, 1.0
+[INSERT], 4387, 1.0
+[INSERT], 4431, 1.0
+[INSERT], 4443, 3.0
+[INSERT], 4503, 1.0
+[INSERT], 4511, 1.0
+[INSERT], 4591, 1.0
+[INSERT], 4615, 1.0
+[INSERT], 4647, 1.0
+[INSERT], 4711, 1.0
+[INSERT], 4735, 1.0
+[INSERT], 4739, 1.0
+[INSERT], 4783, 2.0
+[INSERT], 4859, 2.0
+[INSERT], 4871, 1.0
+[INSERT], 4919, 1.0
+[INSERT], 4987, 1.0
+[INSERT], 5043, 1.0
+[INSERT], 5047, 1.0
+[INSERT], 5119, 1.0
+[INSERT], 5127, 1.0
+[INSERT], 5191, 1.0
+[INSERT], 5203, 1.0
+[INSERT], 5215, 1.0
+[INSERT], 5287, 1.0
+[INSERT], 5307, 1.0
+[INSERT], 5367, 1.0
+[INSERT], 5423, 1.0
+[INSERT], 5431, 1.0
+[INSERT], 5455, 1.0
+[INSERT], 5463, 2.0
+[INSERT], 5475, 1.0
+[INSERT], 5511, 1.0
+[INSERT], 5515, 1.0
+[INSERT], 5535, 1.0
+[INSERT], 5539, 1.0
+[INSERT], 5571, 1.0
+[INSERT], 5575, 1.0
+[INSERT], 5639, 1.0
+[INSERT], 5667, 1.0
+[INSERT], 5711, 1.0
+[INSERT], 5767, 1.0
+[INSERT], 5787, 1.0
+[INSERT], 5823, 1.0
+[INSERT], 5831, 1.0
+[INSERT], 5855, 1.0
+[INSERT], 5899, 1.0
+[INSERT], 5935, 1.0
+[INSERT], 5943, 1.0
+[INSERT], 6043, 1.0
+[INSERT], 6075, 1.0
+[INSERT], 6187, 1.0
+[INSERT], 6419, 1.0
+[INSERT], 6475, 1.0
+[INSERT], 6623, 1.0
+[INSERT], 6639, 1.0
+[INSERT], 7091, 1.0
+[INSERT], 7139, 1.0
+[INSERT], 7731, 1.0
+[INSERT], 8159, 1.0
+[INSERT], 9415, 1.0
+[INSERT], 10935, 1.0
+[INSERT], 11359, 1.0
+[INSERT], 19295, 1.0
+[INSERT], 141439, 1.0
+
